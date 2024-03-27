@@ -7,7 +7,8 @@ const onloadFN = (e) => {
   ) {
     target.innerHTML = `<div class="navbar bg-base-100">
     <div class="navbar-start">
-      <a class="font-bold text-2xl">Blog Dog</a>
+      <img src="assets/images/logo.png" alt="logo" class="w-12 h-12 me-2" />
+<a class="font-bold text-2xl">Blog Dog</a>
     </div>
 
     <div class="navbar-end flex gap-2">
@@ -35,7 +36,9 @@ const onloadFN = (e) => {
     console.log(user);
     target.innerHTML = ` <div class="navbar bg-base-100">
     <div class="navbar-start">
-      <a class="font-bold text-2xl">Blog Dog</a>
+    
+      <img src="assets/images/logo.png" alt="logo" class="w-12 h-12 me-2" />
+<a class="font-bold text-2xl">Blog Dog</a>
     </div>
     
     <div class="navbar-end flex gap-2 pe-3">
@@ -49,7 +52,7 @@ const onloadFN = (e) => {
           <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
           <li><a class="btn btn-sm" href="blog/create.html">Create Blog</a></li>
           <li><a class="btn btn-sm my-2" href="blog/creations.html">My Blogs</a></li>
-          <li><a class="btn btn-sm btn-error" onclick="handleLogout()">Logout</a></li>
+          <li><a class="btn btn-sm btn-error text-slate-100" onclick="handleLogout()">Logout</a></li>
           </ul>
         </div>`
           : `<a class="btn btn-outline" href="login.html">Login</a>
@@ -58,12 +61,13 @@ const onloadFN = (e) => {
     </div>
   </div>`;
   }
-  if (location.pathname.includes("create")) {
+  if (location.pathname.includes("create") || location.pathname.includes("edit")) {
     const user = JSON.parse(localStorage.getItem("current-user")) || null;
     console.log(user);
     target.innerHTML = ` <div class="navbar bg-base-100">
     <div class="navbar-start">
-      <a class="font-bold text-2xl">Blog Dog</a>
+      <img src="../assets/images/logo.png" alt="logo" class="w-12 h-12 me-2" />
+<a class="font-bold text-2xl">Blog Dog</a>
     </div>
     
     <div class="navbar-end flex gap-2">
@@ -76,7 +80,7 @@ const onloadFN = (e) => {
           </button></div>
           <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
           <li><a class="btn btn-sm my-2" href="../index.html"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400 100 256l144-144M120 256h292"></path></svg>Back</a></li>
-          <li><a class="btn btn-sm btn-error" onclick="handleLogout()">Logout</a></li>
+          <li><a class="btn btn-sm btn-error text-slate-100" onclick="handleLogout()">Logout</a></li>
           </ul>
         </div>`
           : `<a class="btn btn-outline" href="login.html">Login</a>
@@ -90,7 +94,8 @@ const onloadFN = (e) => {
     console.log(user);
     target.innerHTML = ` <div class="navbar bg-base-100">
     <div class="navbar-start">
-      <a class="font-bold text-2xl">Blog Dog</a>
+      <img src="../assets/images/logo.png" alt="logo" class="w-12 h-12 me-2" />
+<a class="font-bold text-2xl">Blog Dog</a>
     </div>
     
     <div class="navbar-end flex gap-2">
@@ -104,7 +109,7 @@ const onloadFN = (e) => {
           <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
           <li><a class="btn btn-sm" href="create.html">Create Blog</a></li>
           <li><a class="btn btn-sm my-2" href="../index.html"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400 100 256l144-144M120 256h292"></path></svg>Back</a></li>
-          <li><a class="btn btn-sm btn-error" onclick="handleLogout()">Logout</a></li>
+          <li><a class="btn btn-sm btn-error text-slate-100" onclick="handleLogout()">Logout</a></li>
           </ul>
         </div>`
           : `<a class="btn btn-outline" href="login.html">Login</a>
@@ -118,7 +123,8 @@ const onloadFN = (e) => {
     console.log(user);
     target.innerHTML = ` <div class="navbar bg-base-100">
     <div class="navbar-start">
-      <a class="font-bold text-2xl">Blog Dog</a>
+      <img src="../assets/images/logo.png" alt="logo" class="w-12 h-12 me-2" />
+<a class="font-bold text-2xl">Blog Dog</a>
     </div>
     
     <div class="navbar-end flex gap-2">
@@ -132,7 +138,7 @@ const onloadFN = (e) => {
           <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
           <li><a class="btn btn-sm" href="create.html">Create Blog</a></li>
           <li><a class="btn btn-sm my-2" href="../index.html"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400 100 256l144-144M120 256h292"></path></svg>Back</a></li>
-          <li><a class="btn btn-sm btn-error" onclick="handleLogout()">Logout</a></li>
+          <li><a class="btn btn-sm btn-error text-slate-100" onclick="handleLogout()">Logout</a></li>
           </ul>
         </div>`
           : `<a class="btn btn-outline" href="../login.html">Login</a>
