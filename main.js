@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
     target.innerHTML = ``;
   }
   blogs.forEach((element) => {
-    target.innerHTML += `<div class="card w-96 bg-base-100 shadow-xl">
+    target.innerHTML += `<div class="card w-96 bg-base-100 shadow-xl transition-all hover:scale-[1.05] cursor-pointer">
         <figure class="w-96 h-[256px]"><img data-tag="${element.tag}" class="max-h-[256px] h-full object-cover" src="${element.bannerImage}" onerror="imageError(this)" /></figure>
         <div class="card-body">
           <h2 class="card-title">

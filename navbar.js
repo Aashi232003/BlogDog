@@ -38,10 +38,19 @@ const onloadFN = (e) => {
       <a class="font-bold text-2xl">Blog Dog</a>
     </div>
     
-    <div class="navbar-end flex gap-2">
+    <div class="navbar-end flex gap-2 pe-3">
       ${
         user
-          ? `<h3 class="text-2xl font-medium">${user.fullname ?? 'Error'}</h3><a class="btn btn-primary" onclick="handleLogout()">Logout</a><a class="btn btn-secondary" href="blog/create.html">Create Blog</a>`
+          ? `<h3 class="text-2xl font-medium inline">${
+              user.fullname ?? "Error"
+            }</h3><div class="dropdown dropdown-bottom dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-circle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button></div>
+          <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a class="btn btn-sm my-2" href="blog/create.html">Create Blog</a></li>
+          <li><a class="btn btn-sm btn-error" onclick="handleLogout()">Logout</a></li>
+          </ul>
+        </div>`
           : `<a class="btn btn-outline" href="login.html">Login</a>
           <a class="btn btn-secondary" href="signup.html">Sign Up</a>`
       }
@@ -59,7 +68,16 @@ const onloadFN = (e) => {
     <div class="navbar-end flex gap-2">
       ${
         user
-          ? `<h3 class="text-2xl font-medium">${user.fullname ?? 'Error'}</h3><a class="btn btn-primary" onclick="handleLogout()">Logout</a><a class="btn btn-secondary" href="../index.html"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400 100 256l144-144M120 256h292"></path></svg>Back</a>`
+          ? `<h3 class="text-2xl font-medium inline">${
+              user.fullname ?? "Error"
+            }</h3><div class="dropdown dropdown-bottom dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-circle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button></div>
+          <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a class="btn btn-sm my-2" href="../index.html"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M244 400 100 256l144-144M120 256h292"></path></svg>Back</a></li>
+          <li><a class="btn btn-sm btn-error" onclick="handleLogout()">Logout</a></li>
+          </ul>
+        </div>`
           : `<a class="btn btn-outline" href="login.html">Login</a>
           <a class="btn btn-secondary" href="signup.html">Sign Up</a>`
       }
@@ -72,4 +90,4 @@ function handleLogout() {
   localStorage.removeItem("current-user");
   location.pathname = "index.html";
 }
-window.addEventListener('load', onloadFN);
+window.addEventListener("load", onloadFN);

@@ -27,6 +27,7 @@ function handleBlogCreate(){
         tag,
         bannerImage,
         content,
+        blogId: Date.now(),
         authorId: user.uid,
         authorName: user.fullname,
     }
