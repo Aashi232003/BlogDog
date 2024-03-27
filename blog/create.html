@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="emerald">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Dog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header></header>
+    <!-- Navbar End -->
+    <!-- Main -->
+    <section
+      class="p-2 mt-5 w-full max-w-[1400px] mx-auto"
+    >
+      <label class="input input-bordered flex items-center gap-2 text-3xl">
+        <span class="border-e flex items-center h-full pe-4">Title</span>
+        <input
+          type="text"
+          id="title"
+          class="grow border-l-base-100"
+          placeholder="Blog Title"
+        />
+      </label>
+     <div class="flex gap-2">
+      <label class="input input-bordered flex items-center gap-2 text-3xl mt-2 w-1/3">
+        <span class="border-e flex items-center h-full pe-4">Tag</span>
+        <input
+          type="text"
+          id="tag"
+          class="grow border-l-base-100"
+          placeholder="Tag"
+        />
+      </label> <label class="input input-bordered flex items-center gap-2 text-3xl mt-2 w-2/3" >
+        <span class="border-e flex items-center h-full pe-4">Banner Image</span>
+        <input
+          type="text"
+          id="banner-image"
+          class="grow border-l-base-100"
+          placeholder="image url"
+        />
+      </label>
+     </div>
+      <div class="editor-wrapper mt-5 prose w-full min-w-full">
+        <div id="editor" class="h-6"></div>
+      </div>
+      <div class="flex flex-row-reverse gap-3 mt-3">
+        <button class="btn btn-secondary " onclick="handleBlogCreate()">Create</button>
+        <button class="btn btn-error ">Discard</button>
+      </div>
+    </section>
+    <!-- Main End -->
+    <script src="../navbar.js"></script>
+    <script src="../assets/js/ckeditor.js"></script>
+    <script src="../editor.js"></script>
+    <script src="create.js"></script>
+  </body>
+</html>
