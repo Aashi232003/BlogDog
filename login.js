@@ -1,6 +1,6 @@
 
 
-function handleSignup(event){
+function handleLogin(event){
     event.preventDefault();
     let form = event.target;
     let formData = new FormData(form);
@@ -19,12 +19,11 @@ function handleSignup(event){
     }
 
     const users = JSON.parse(localStorage.getItem('users')) || [];
-    if(users.find(user => user.email === values.email)){
-        alert('User already exists');
+    console.log(users, values);
+    if(!users.find(user => user.email === values.email && user.password === values.password)){
+        alert('Invalid Credentials');
         return;
     }
-    users.push(values);
-    localStorage.setItem('users', JSON.stringify(users));
     localStorage.setItem('current-user', JSON.stringify(values));
     window.location.pathname = "index.html"
 }
