@@ -72,4 +72,4 @@ function handleLogout() {
   localStorage.removeItem("current-user");
   location.pathname = "index.html";
 }
-window.addEventListener('load', onloadFN, {once: true});
+window.addEventListener('load', onloadFN);
