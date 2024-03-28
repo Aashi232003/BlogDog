@@ -31,7 +31,7 @@ const onloadFN = (e) => {
     return;
   }
 
-  if (location.pathname.includes("index") || location.pathname === "/") {
+  if (location.pathname.includes("index") || location.pathname === "/" || location.pathname === "/BlogDog/") {
     const user = JSON.parse(localStorage.getItem("current-user")) || null;
     console.log(user);
     target.innerHTML = ` <div class="navbar bg-base-100">
